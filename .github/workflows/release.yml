@@ -33,7 +33,7 @@ jobs:
       with:
         files: target/*.jar
     - name: Copy target to release staging area
-      run: mkdir staging && cp target/*.jar staging
+      run: mkdir staging && cp ./mvnapp/target/*.jar staging
     - name: Upload staged files to a package
       uses: actions/upload-artifact@v4
       with:
